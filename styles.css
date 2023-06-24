@@ -46,32 +46,51 @@ body{
   font-size: 14px;
   margin-bottom: 10px;
 }
-.container__content p img{
-    font-size: 11px;
+.check-icon{
+    width: 14px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 .container__input{
     margin-top: 20px;
+    position: relative;
 }
-.container__input h5{
-    font-size: 12px;
+label{
+    font-size: 14px;
+    font-weight: 700;
 }
-.container__input input{
-    padding: 10px 20px;
+.container__input input[type='email']{
+    padding: 15px 30px;
     border: 1px solid var(--Charcoal-Grey);
     border-radius: 10px;
     margin: 10px 0;
+    width: 100%;
+    
 }
-.container__input button{
+#error-msg{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.container__input button,
+.succesful button{
     background-color: var(--Dark-Slate-Grey);
     color: var(--White);
     border-radius: 10px;
     outline: none;
     border: none;
-    padding: 10px 20px;
-    transition: all 400ms ease-in-out;
+    font-size: 16px;
+    padding: 15px 30px;
+    font-weight: 700;
+    width: 100%;
+    transition: all 400ms linear;
     cursor: pointer;
 }
-.container__input button:hover{
+.container__input button:hover,
+.succesful button:hover{
     background: linear-gradient(90deg, rgba(246,58,141,1) 0%, rgba(248,83,68,1) 100%);
    
 }
@@ -82,6 +101,25 @@ body{
 }
 .container__image img{
     width: 100%;
+}
+
+
+.succesful{
+    background-color: var(--White);
+    width: 17rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.succesful h1{
+    font-weight: 700;
+}
+.succesful p{
+    font-size: 12px;
+    margin: 10px 0;
+}
+.succesful button{
+    padding: 10px 20px;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 690px){
@@ -95,14 +133,27 @@ body{
         width: 100%;
     }
 }
-/* @media screen and (max-width:450px){
+@media screen and (max-width:450px){
     .container{
         flex-direction: column-reverse;
-        width: 41rem;
-        height:  5rem;
-        padding: 0;
+        width: 90%;
+        height: 80vh;
+        padding:0 0 20px 20px;
+        margin: 0 2%;
     }
    .container__image img{
-    height: 12rem;
+    width: 100vw;
+    height: 250px;
    }
-} */
+   .container__input button,
+   .container__input input{
+    width: 100%;
+   }
+   .container__content p{
+    margin: 10px 0;
+   }
+   .container__image img{
+    width: 100vw;
+    
+}
+}
